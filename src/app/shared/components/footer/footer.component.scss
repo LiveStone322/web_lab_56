@@ -1,0 +1,11 @@
+.container-fluid {
+  background-color: #2f3134;
+  & > .row {
+    padding: 18px 0;
+  }
+}
+
+#footer {
+  color: #fff;
+  font-size: 14px;
+}

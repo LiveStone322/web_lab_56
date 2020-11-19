@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  app-header, app-footer {
+    flex-grow: 0;
+  }
+  .wrapper {
+    flex-grow: 1;
+  }
+}

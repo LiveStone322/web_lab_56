@@ -1,0 +1,22 @@
+<div class="panel">
+    <div class="row d-flex justify-content-center">
+      <mat-form-field class="col-11 col-md-10">
+        <mat-label>Что сделать?</mat-label>
+        <input
+          matInput
+          [formControl]="titleControl"
+          [placeholder]="placeholder"
+        >
+        <mat-error *ngIf="titleControl.hasError('required')">
+          Название <strong>обязательно</strong>
+        </mat-error>
+      </mat-form-field>
+      <button
+        mat-button
+        color="primary"
+        (click)="onAdd()"
+      >
+        Добавить
+      </button>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.container {
+  margin-top: 24px;
+  .card{
+    margin-bottom: 16px;
+    &__content{
+      margin-left: 12px;
+      &_done {
+        opacity: 0.5;
+      }
+      & > * {
+        margin-right: 12px;
+      }
+    }
+    &__title, &__title_done {
+      font-size: 24px
+    }
+    &__title {
+      text-decoration: none;
+      &_done {
+        text-decoration: line-through;
+      }
+    }
+  }
+}

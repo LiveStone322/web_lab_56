@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-7">
+      <div class="row d-flex justify-content-center">
+        <mat-form-field class="col-11 col-md-10">
+          <mat-label>Логин</mat-label>
+          <input matInput [formControl]="loginControl" />
+          <mat-error *ngIf="loginControl.hasError('required')">
+            Название <strong>обязательно</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-11 col-md-10">
+          <mat-label>Пароль</mat-label>
+          <input matInput [formControl]="passControl" />
+          <mat-error *ngIf="passControl.hasError('required')">
+            Название <strong>обязательно</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <button mat-button color="primary">Войти/Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>

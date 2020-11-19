@@ -1,0 +1,28 @@
+<div class="container">
+  <section class="container">
+    <div class="row d-flex justify-content-center">
+      <app-knobs class="col-10 col-md-8"></app-knobs>
+    </div>
+  </section>
+
+  <mat-card class="row card" *ngFor="let todo of todos; let i = index">
+    <div
+      class="row card__content align-items-center"
+      [ngClass]="{
+       'card__content_done': todo.done
+      }"
+    >
+      <app-todo-done
+        [done]="todo.done"
+        (onClick)="onDoneClick(i)"
+      ></app-todo-done>
+      <span
+        [ngClass]="{
+          card__title_done: todo.done,
+          card__title: !todo.done
+        }"
+        >{{ todo.title }}</span
+      >
+    </div>
+  </mat-card>
+</div>
